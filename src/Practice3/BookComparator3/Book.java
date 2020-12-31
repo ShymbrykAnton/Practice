@@ -1,18 +1,23 @@
-package Practice3;
+package Practice3.BookComparator3;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.Objects;
 
 public class Book {
-    private int id;
-    private String title;
-    private String authorS;
-    private String publisher;
-    private int yearOfPublication;
-    private int numberOfPages;
-    private double price;
+    private final int id;
+    private final String title;
+    private final String authorS;
+    private final String publisher;
+    private final int yearOfPublication;
+    private final int numberOfPages;
+    private final double price;
 
+    public String getTitle() {
+        return title;
+    }
+
+    public int getYearOfPublication() {
+        return yearOfPublication;
+    }
 
     public Book(int id, String title, String authorS, String publisher,
                 int yearOfPublication, int numberOfPages, double price) {
@@ -45,8 +50,8 @@ public class Book {
     }
     @Override
     public String toString() {
-        return String.format("Название книги: " + title + ". Автор(ы): " + authorS +
+        return "Название книги: " + title + ". Автор(ы): " + authorS +
                 ". Издатель: " + publisher + ".\nГод публикации: " + yearOfPublication + ". Колличество страниц: "
-                + numberOfPages + ". Цена (американский доллар): " + price+"\n");
+                + numberOfPages + ". Цена (американский доллар): " + price;
     }
 }

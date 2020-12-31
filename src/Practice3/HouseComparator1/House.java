@@ -1,26 +1,20 @@
-package Practice3;
+package Practice3.HouseComparator1;
 
-import java.util.Calendar;
-import java.util.Comparator;
-import java.util.GregorianCalendar;
 import java.util.Objects;
 
-public class House implements Comparable<House> {
-    public int getId() {
-        return id;
-    }
+public class House  {
 
-    private int id;
-    private int apartmentNumber;
-    private int area;
-    private int floor;
-    private int numberOfRooms;
-    private String street;
-    private String city;
-    private int year;
-    private int month;
-    private int day;
-    private String serviceLife;
+    private final int id;
+    private final int apartmentNumber;
+    private final int area;
+    private final int floor;
+    private final int numberOfRooms;
+    private final String street;
+    private final String city;
+    private final int year;
+    private final int month;
+    private final int day;
+    private final String serviceLife;
 
     public House(int id, int apartmentNumber, int area, int floor, int numberOfRooms, String street, String city, int year, int month, int day) {
         this.id = id;
@@ -38,10 +32,9 @@ public class House implements Comparable<House> {
 
     @Override
     public String toString() {
-        //Номер квартиры, Площадь, Этаж, Количество комнат, Улица, Город, Срок эксплуатации
-        return String.format("Номер квартиры: " + apartmentNumber + ". Площадь, кв.м.: " + area +
+        return "Номер квартиры: " + apartmentNumber + ". Площадь, кв.м.: " + area +
                 ". Этаж: " + floor + ". Кол-во комнат: " + numberOfRooms + ". Улица: "
-                + street + ". Город: " + city + ". Срок эксплуатации: " + serviceLife);
+                + street + ". Город: " + city + ". Срок эксплуатации: " + serviceLife;
     }
 
     @Override
@@ -67,14 +60,9 @@ public class House implements Comparable<House> {
                 day == house.day;
     }
 
-    public int compareTo(House anotherHouse)
-    {
-        if (this.area == anotherHouse.area) {
-            return 0;
-        } else if (this.area < anotherHouse.area) {
-            return -1;
-        } else {
-            return 1;
-        }
+
+    public int getArea() {
+        return area;
     }
 }
+
