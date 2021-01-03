@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class Product implements Comparable {
+public class Product implements Comparable<Product> {
     private final long id;
     private final String name;
     private final String manufacturer;
@@ -28,8 +28,10 @@ public class Product implements Comparable {
         this.quantity = quantity;
     }
 
+
+
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Product o) {
         return 0;
     }
 }
