@@ -1,5 +1,8 @@
 package Practice2;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class BinaryNumbers {
     //Функция возвращает байтовый массив, передаваемый на вход, в  виде строки в 16ти-ричном формате
     public String byteToHex(byte[] input) {
@@ -15,9 +18,14 @@ public class BinaryNumbers {
 
 
 //    //Функция принимает строку, состоящую из символов используемых для 16ти-ричного формата, и преобразует её в байтовый массив
-//    public byte[] hexToByte(String input) {
-//
-//    }
+    public String hexToByte(String input) {
+        byte[] array = new byte[input.length()/2];
+        char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
+        for (int i = 0;i<array.length;i++ ) {
+        }
+
+        return Arrays.toString(array);
+    }
 //
 //    //Функция принимает число и возвращает строку, представляющую бинарное представление данного числа
 //    public String longToBin(long input) {
